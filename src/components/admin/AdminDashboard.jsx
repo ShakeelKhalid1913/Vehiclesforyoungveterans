@@ -216,9 +216,11 @@ const AdminDashboard = () => {
               <Card sx={{ 
                 height: '100%',
                 transition: 'all 0.3s ease-in-out',
+                boxShadow: '0 3px 10px rgba(0,0,0,0.12)',
                 '&:hover': {
                   transform: 'translateY(-4px)',
                   bgcolor: theme.palette.primary.main,
+                  boxShadow: '0 8px 20px rgba(0,0,0,0.2), 0 10px 30px rgba(0,0,0,0.12)',
                   '& .MuiTypography-root': {
                     color: 'white',
                   },
@@ -271,7 +273,15 @@ const AdminDashboard = () => {
 
       {/* Donations Table */}
       <Box sx={{ mt: 4 }}>
-        <Paper elevation={1} sx={{ p: 3 }}>
+        <Paper elevation={0} sx={{ 
+          p: 3,
+          boxShadow: '0 4px 15px rgba(0,0,0,0.15), 0 6px 20px rgba(0,0,0,0.1)',
+          borderRadius: 2,
+          transition: 'box-shadow 0.3s ease-in-out',
+          '&:hover': {
+            boxShadow: '0 6px 20px rgba(0,0,0,0.18), 0 8px 25px rgba(0,0,0,0.12)',
+          }
+        }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
             <Typography variant="h6" sx={{ color: theme.palette.text.primary }}>
               Recent Donations

@@ -16,6 +16,8 @@ import AdminHeader from './components/admin/AdminHeader';
 import Reports from './components/admin/Reports';
 import HowItWorks from './pages/HowItWorks';
 import Reviews from './pages/Reviews';
+import Inventory from './components/admin/Inventory';
+import Settings from './components/admin/Settings';
 
 // Create a theme instance based on the new color scheme
 const theme = createTheme({
@@ -163,6 +165,8 @@ const AppContent = () => {
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/reports" element={<Reports />} />
+          <Route path="/admin/inventory" element={<Inventory />} />
+          <Route path="/admin/settings" element={<Settings />} />
         </Routes>
       </Box>
       <Footer />
