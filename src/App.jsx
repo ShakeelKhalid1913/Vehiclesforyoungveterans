@@ -141,7 +141,7 @@ const AppContent = () => {
       padding: 0,
       overflow: 'hidden'
     }}>
-      {location.pathname.startsWith('/admin') ? <AdminHeader /> : <Header />}
+      {location.pathname.startsWith('/') ? <AdminHeader /> : <Header />}
       
       <Box 
         component="main" 
@@ -154,15 +154,16 @@ const AppContent = () => {
       >
         <Routes>
           {/* Public Routes */}
-          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/donate" element={<DonationForm />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
-          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/reviews" element={<Reviews />} /> */}
           
           {/* Admin Routes */}
+          <Route path="/" element={<AdminDashboard />} />
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/reports" element={<Reports />} />
           <Route path="/admin/inventory" element={<Inventory />} />
